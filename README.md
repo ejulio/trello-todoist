@@ -19,3 +19,4 @@ Some issues:
 * If there is a problem creating the project, it will create cards in *Inbox*.
 * If any message fails, it will be `unacked` in RabbitMQ and `todoist.py` should be restarted to reprocess this message
 * In the previous scenarion, the message will, probably, be sent to *Inbox*
+* It waits 5s to process each message because Todoist was blocking the requests
